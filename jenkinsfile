@@ -8,13 +8,13 @@ pipeline {
   }
 
 
-  /*stages {
+  stages {
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/ireshkanashetti/Jarvis-Desktop-Voice-Assistant.git'
       }
     }
-
+/*
      stage('Package & Transfer') {
             steps {
                 sshagent(credentials: ["${CRED_ID}"]) {
@@ -136,9 +136,10 @@ EOF
         sh '''
             ssh -o StrictHostKeyChecking=no ubuntu@13.49.73.37 "cd /home/ubuntu/jarvis && chmod +x setup_and_restart.sh && ./setup_and_restart.sh"
         '''
+          }
         }
       }
-    }
+   }
 } 
 
     /*stage('Remote: Setup & Restart') {
