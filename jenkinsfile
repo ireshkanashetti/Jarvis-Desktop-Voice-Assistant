@@ -4,11 +4,10 @@ pipeline {
     REMOTE_USER = "ubuntu"
     REMOTE_HOST = "13.49.73.37"
     REMOTE_DIR  = "/home/ubuntu/jarvis"
-    SSH_OPTS    = "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
     CRED_ID     = "node-app-key"
   }
 
-  stages {
+  /*stages {
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/ireshkanashetti/Jarvis-Desktop-Voice-Assistant.git'
@@ -117,8 +116,9 @@ EOF
         }
     }
 }
+*/
 
-   /*
+   
     stage('Package & Transfer') {
       steps {
         sshagent(credentials: ["${CRED_ID}"]) {
