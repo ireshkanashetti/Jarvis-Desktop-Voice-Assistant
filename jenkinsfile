@@ -6,6 +6,7 @@ pipeline {
     REMOTE_DIR  = "/home/ubuntu/jarvis"
     CRED_ID     = "node-app-key"
   }
+}
 
   /*stages {
     stage('Checkout') {
